@@ -20,3 +20,8 @@ function agregarAmigo () {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
+
+function CrearLista (elemento, texto) {
+    let elementoHTML = document.querySelector(elemento)
+    elementoHTML.innerHTML = texto
+}
