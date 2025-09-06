@@ -1,6 +1,7 @@
 // Define las variables necesarias
-let listaAmigos = [];
+let AmigosIngresados = [];
 let nombreAmigo = 0;
+let listaItems = 0;
 
 // Desarrollo una función para agregar amigos a la lista
 
@@ -12,8 +13,10 @@ function agregarAmigo () {
     if (nombreAmigo == '') {
         alert('inserte un nombre válido');
     } else {
-        listaAmigos.push(nombreAmigo);
+        AmigosIngresados.push(nombreAmigo);
+        console.log(AmigosIngresados)
         limpiarCaja ();
+        mostrarNombres ();
     }
 }
 
@@ -21,7 +24,15 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
 
-function CrearLista (elemento, texto) {
-    let elementoHTML = document.querySelector(elemento)
-    elementoHTML.innerHTML = texto
+function mostrarNombres () {
+    let listaHTML = document.getElementById('listaAmigos');
+    listaHTML.innerHTML = '';
+
+    // Recorrer el array y crear un <li> para cada nombre
+    for (let i = 0; i < AmigosIngresados.length; i++) {
+          console.log(AmigosIngresados[i]);
+        listaItems = document.createElement('li');
+        listaItems.textContent = AmigosIngresados[i];
+        listaHTML.appendChild(listaItems);
+        }   
 }
