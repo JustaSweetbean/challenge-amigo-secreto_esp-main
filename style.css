@@ -1,9 +1,9 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #ffa8f0dc;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-tertiary: #f9cbff;
+    --color-button: #fe2bb8;
+    --color-button-hover: #e520aa;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -58,14 +58,14 @@ body {
     font-family: "Merriweather", serif;
     font-weight: 900;
     font-style: italic;
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
 .section-title {
     font-family: "Inter", serif;
     font-size: 36px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-button);
     margin: 10px 0;
     text-align: center;
 }

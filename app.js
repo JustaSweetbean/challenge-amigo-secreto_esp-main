@@ -2,6 +2,7 @@
 let AmigosIngresados = [];
 let nombreAmigo = 0;
 let listaItems = 0;
+let amigoSorteado = 0;
 
 // Desarrollo una función para agregar amigos a la lista
 
@@ -35,4 +36,14 @@ function mostrarNombres () {
         listaItems.textContent = AmigosIngresados[i];
         listaHTML.appendChild(listaItems);
         }   
+}
+
+function sortearAmigo() {
+    
+    if (AmigosIngresados != '') {
+        amigoSorteado = Math.floor(Math.random()* AmigosIngresados.length);
+        console.log(amigoSorteado)
+        let listaResultadoHTML = document.getElementById('resultado');
+        listaResultadoHTML.innerHTML = (AmigosIngresados[amigoSorteado]);
+    } 
 }
